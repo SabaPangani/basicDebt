@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/rolly.js/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="owl.carousel.min.css">
+        <link rel="stylesheet" href="owl.theme.green.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body style="transition:.8s cubic-bezier(0.72,0,0.28,1);">
+    <div class="cursor">play <br> reel</div>
+    <div class="cursor-drag"><span class="drag-text">DRAG</span></div>
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.3 27.7"><path d="M0,24.1h11.7c5.5,0,8.7-2.3,8.7-6.8c0-2.8-1.7-4.5-4.1-5.3c2-0.9,3.4-2.6,3.4-5.3c0-3.5-2.2-5.9-7.5-5.9H0V24.1z M13.1,7.9 c0,1.6-1,2.4-3.2,2.4H6.4V5.5h3.5C12.1,5.5,13.1,6.3,13.1,7.9z M13.8,16.9c0,1.7-1,2.4-3.3,2.4H6.4v-4.9h4.2 C12.8,14.4,13.8,15.2,13.8,16.9z"></path><path d="M38.2,24.1h6.7L36.8,0.7h-8.4l-8.1,23.4h6.5l1.2-3.8h9.1L38.2,24.1z M32.5,5.9l2.9,9.5h-5.9L32.5,5.9z"></path><path d="M55.1,24.5c6.3,0,10.3-3,10.3-7.7c0-3.8-2.5-5.8-6.5-6.6l-5.1-1c-2-0.4-2.6-1-2.6-2.1S52.4,5,54.5,5c2.4,0,4.1,1,4.2,3.1H65 c0-5.6-4.7-7.8-10.5-7.8c-5.6,0-9.7,2.8-9.7,7.3c0,3.8,2.5,5.8,6.5,6.6l5.1,1c2,0.4,2.6,1,2.6,2.1c0,1.5-1.4,2.3-3.7,2.3 c-2.6,0-4.5-1.3-4.6-3.8h-6.3C44.6,21.3,48.1,24.5,55.1,24.5z"></path><path d="M67.3,24.1h6.4V0.7h-6.4V24.1z"></path><path d="M82,12.4c0-3.9,2.1-6.8,5.6-6.8c2.9,0,4.7,1.7,5.1,3.7h6.7c-0.6-6.1-5.8-9.1-11.7-9.1C80,0.2,75.4,5,75.4,12.3 s4.5,12.1,12.3,12.1c6,0,11.2-2.9,11.8-9.1h-6.7c-0.4,2.1-2.1,3.7-5.1,3.7C84.1,19.2,82,16.3,82,12.4z"></path><path d="M113.7,0h-5.2l-10,27.7h5.2L113.7,0z"></path><path d="M137.8,12.4c0-6.6-3.6-11.7-12.8-11.7h-9.8v23.4h9.8C134.2,24.1,137.8,19,137.8,12.4z M131.2,12.4c0,4.6-2.6,6.3-6.2,6.3 h-3.3V6.1h3.3C128.6,6.1,131.2,7.8,131.2,12.4z"></path><path d="M139.5,24.1H158v-5.3h-12.2v-4h10.7V9.7h-10.7V6.1h11.9V0.7h-18.2V24.1z"></path><path d="M180,8.9c0-5.9-3.8-8.1-9.6-8.1h-10.1v23.4h6.4V17h3.8C176.2,17,180,14.8,180,8.9z M173.4,8.9c0,2.3-1.1,3.2-3.7,3.2h-3.1 V5.6h3.1C172.3,5.6,173.4,6.6,173.4,8.9z"></path><path d="M181,6.2h7.4v17.9h6.4V6.2h7.4V0.7H181V6.2z"></path><path d="M203.5,23.7c-2.6,0-4.8-2.1-4.8-4.8c0-2.6,2.1-4.8,4.8-4.8s4.8,2.1,4.8,4.8C208.3,21.5,206.1,23.7,203.5,23.7z M203.5,14.9 c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S205.7,14.9,203.5,14.9z"></path><path d="M204,17.2h-1.4v1.6h1.4c0.5,0,0.7-0.3,0.7-0.8C204.7,17.5,204.4,17.2,204,17.2z M203.9,16.4c1.2,0,1.8,0.5,1.8,1.6 c0,0.6-0.3,1.1-0.9,1.3l1.2,1.8h-1.2l-1.1-1.6h-1.2v1.6h-1.1v-4.7H203.9z"></path></svg>
+                <div class="navbar-nav">
+                    <div class="navbar-li">
+                        <a class="navbar-link">work</a>
+                    </div>
+                    <div class="navbar-li">
+                        <a class="navbar-link">about</a>
+                    </div>
+                    <div class="navbar-li">
+                        <a class="navbar-link">news</a>
+                    </div>
+                    <div class="navbar-li">
+                        <a class="navbar-link">thinking</a>
+                    </div>
+                    <div class="navbar-li">
+                        <a class="navbar-link">careers</a>
+                    </div>
+                    <div class="navbar-li">
+                        <a class="navbar-link">contact</a>
+                    </div>
+                </div>
+                <div class="list">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="wrapper">
+            <div class="video-div">
+                <video alt="" playsinline="true" muted="true" loop="" preload="metadata" autoplay src="https://basic-admin.basicagency.com/uploads/reel-loop.mp4"></video>
+            </div>
+
+            <div class="play-reel">
+                <span class="play">Play <br> reel</span>
+                <div class="text">
+                    <span>basic/dept</span>
+                    <span>2010-22</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overview">
+        <div class="container">
+            <div class="wrapper">
+                <div class="text-box">                    
+                    <div class="top">
+                        <p data-scroll>BASIC/DEPT® is a global branding and digital design agency building products, services, and eCommerce experiences that turn cultural values into company value.</p>
+                        <figure class="overview-home__logo"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 100"><path d="M0,86.8h41.9c19.6,0,31.3-8.3,31.3-24.5c0-10.2-6-16.2-15.1-19.2c7.2-3.4,12.1-9.4,12.1-19.2c0-12.5-7.9-21.5-27.2-21.5H0 V86.8z M47.2,28.3c0,5.7-3.8,8.7-11.7,8.7H23V19.6h12.5C43.8,19.6,47.2,22.6,47.2,28.3z M49.8,60.8c0,6-3.8,8.7-12.1,8.7H22.6V51.7 h15.1C46,52.1,49.8,54.7,49.8,60.8z M128.3,0h-18.9L73.6,100h18.5L128.3,0z M216.6,44.5c0-23.8-12.8-42.3-46-42.3h-35.5v84.5h35.5 C203.4,86.8,216.6,68.3,216.6,44.5z M192.5,44.5c0,16.6-9.4,22.6-22.3,22.6h-12.1V21.9h12.1C183,21.9,192.5,27.9,192.5,44.5z"></path><path d="M224.2,46.4c0,22.6,18.5,41.1,41.1,41.1c22.6,0,41.1-18.5,41.1-41.1S287.9,5.3,265.3,5.3C242.6,5.3,224.2,23.8,224.2,46.4z M232.1,46.4c0-18.9,14.7-34,33.2-34c18.5,0,33.2,15.1,33.2,34s-15.1,34-33.2,34C246.8,80,232.1,64.9,232.1,46.4z M246,66.8h12.8 v-14h7.5l7.5,14h14l-9.4-16.6c4.2-1.9,7.5-6.8,7.5-12.1c0-9.4-6-14-16.6-14h-23.8v42.6H246z M272.8,38.1c0,3.4-2.3,4.9-6.4,4.9h-7.9 V34h7.9C270.9,34.3,272.8,35.1,272.8,38.1z"></path></svg></figure>
+                    </div>
+                    <button>see the work</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-display">
+        <div class="container">
+            <div class="wrapper">
+                <div class="cards">
+                    <div class="card card-1">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/Work/Patagonia/Images/_720xAUTO_crop_center-center_65_none/Patagonia-Case-Study-Thumbnail.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3>Patagonia</h3>
+                            <p>AN ECOMMERCE EXPERIENCE DRIVEN BY PATAGONIA’S BRAND MISSION</p>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/Work/Wilson/Images/_720xAUTO_crop_center-center_65_none/WIlson-Case-Study-Thumbnail.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3>wilson</h3>
+                            <p>a century-old sports brand finding its place in culture</p>
+                        </div>
+                    </div>
+                    <div class="card card-3">
+                        <div class="img-div">
+                           <video autoplay loop src="https://basic-admin.basicagency.com/uploads/Work/Google-Store/Video/Google-Store-Web-Design-Case-Study-Thumbnail-02.mp4"></video>
+                        </div>
+                        <div class="card-body">
+                            <h3>google store</h3>
+                            <p>an ecommerce experience helping google bring  its hardware to people across the globe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="line-div">
+        <div class="container">
+            <div class="line">
+                <div class="dot">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="featured">
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h1>featured <br> engagements</h1>
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item item-1">
+                        <div class="header">
+                            <img src="https://basic-admin.basicagency.com/uploads/google-dark.svg" alt="">
+                            <div class="line"></div>
+                        </div>
+                        <div class="item-body">
+                            <div class="body-header">
+                                GOOGLE
+                            </div>
+                            <p class="desc">
+                                Our embedded partnership with Google is as deep as it gets. We’re the lead creative agency for 
+                                Google Store and provide strategy, design, and prototyping to other divisions.
+                                 Learn more about our partnership <br> <a>here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <div class="header">
+                            <img src="https://basic-admin.basicagency.com/uploads/KFC-Logo.svg" alt="">
+                            <div class="line"></div>
+                        </div>
+                        <div class="item-body">
+                            <div class="body-header">
+                                KFC
+                            </div>
+                            <p class="desc">
+                                An award-winning global, digital transformation engagement spanning eCommerce, mobile app, and n
+                                ew drive thru experiences. Bringing KFC’s brand story to life while making it eas
+                                ier for customers to buy chicken. Learn more about our partnership <br> <a>here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item item-3">
+                        <div class="header">
+                            <img src="https://basic-admin.basicagency.com/uploads/Wilson-Logo.svg" alt="">
+                            <div class="line"></div>
+                        </div>
+                        <div class="item-body">
+                            <div class="body-header">
+                                WILSON
+                            </div>
+                            <p class="desc">
+                                A reimagining of Wilson’s brand visual identity, and brand campaign, to support a new product drop and the launch o
+                                f the first brick and mortar retail location in the brand’s 108-year history. Read our full case study <br> <a>here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item item-4">
+                        <div class="header">
+                            <img src="https://basic-admin.basicagency.com/uploads/ATT-Logo.svg" alt="">
+                            <div class="line"></div>
+                        </div>
+                        <div class="item-body">
+                            <div class="body-header">
+                                AT&T
+                            </div>
+                            <p class="desc">
+                                Redesigning the digital flagship for the largest telecommunications company in the world. Creating frictionless paths to purchase for a wide range of consumers across a vast portfolio of products and services.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item item-5">
+                        <div class="header">
+                            <img src="https://basic-admin.basicagency.com/uploads/patagonia-dark.svg" alt="">
+                            <div class="line"></div>
+                        </div>
+                        <div class="item-body">
+                            <div class="body-header">
+                                PATAGONIA
+                            </div>
+                            <p class="desc">
+                                Ongoing partnership providing strategy, branding, experience design, and development focused on bringing their m
+                                ssion and offerings to consumers through brand-led program
+                                s and platforms. Read our full case study  <br> <a>here</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="spotlight">
+        <div class="container">
+            <div class="wrapper">
+                <div class="text-box parallax">
+                    <q>BASIC/DEPT® helps brands <span class="dot-wrapped"><span>●</span><span>connect</span></span> w/ culture</q>
+                    <span>ADWEEK <span style="font-weight:700;">(AGENCY SPOTLIGHT)</span></span>
+                    <button>about us</button>
+                </div>
+                <div class="video">
+                    <video autoplay loop src="https://basic-admin.basicagency.com/uploads/Culture-Loop_v1.mp4"></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <h1>featured <br> news</h1>
+                    <button>view all</button>
+                </div>
+                <div class="cards">
+                    <div class="card card-1">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/lovie-awards-win-blog.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>DEPT® WINS LOVIE'S AGENCY OF THE YEAR</p>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Awards</span>
+                                <span style="margin-left:13px;">11.09.22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/JAMS-Case-Study-cover-image-AWWWARDS-1900x930-px-2-1.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>
+                                    B/D® JAMS EARNS AWWWARDS SITE OF THE MONTH</p>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Awards</span>
+                                <span style="margin-left:13px;">10.22.22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-3">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/steve-applied-THUMBNAIL.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>
+                                    HOW CREATIVES CAN REIMAGINE THE PRINCIPLES OF GOOD DESIGN</p>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Applied</span>
+                                <span style="margin-left:13px;">09.23.22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-4">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/Jams-thumbnail-1.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>
+                                    B/D® JAMS: BY US FOR US</p>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Press</span>
+                                <span style="margin-left:13px;">08.08.12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-5">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/Ashley-Blog-Thumbnail.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>
+                                    ASHLEY REICHEL TAKES THE REINS AS BASIC/DEPT®’S NEW CEO</p>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Press</span>
+                                <span style="margin-left:13px;">08.15.12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-6">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/image-10.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>
+                                    DESIGN SYSTEMS: GOOD FOR BUSINESS</p>
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Applied</span>
+                                <span style="margin-left:13px;">07.07.22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-7">
+                        <div class="img-div">
+                            <img src="https://basic-admin.basicagency.com/uploads/_870xAUTO_crop_center-center_65_none/climateneutralblog.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header">
+                                <p>
+                                    BASIC/DEPT® IS CLIMATE NEUTRAL CERTIFIED
+                                <i class="bi bi-arrow-right-short"></i>
+                            </div>
+                            <div class="awards">
+                                <span style="font-weight:700;">Press</span>
+                                <span style="margin-left:13px;">05.19.22</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-body">
+
+                    <div class="left-side">
+                        <div class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 100"><path d="M0,86.8h41.9c19.6,0,31.3-8.3,31.3-24.5c0-10.2-6-16.2-15.1-19.2c7.2-3.4,12.1-9.4,12.1-19.2c0-12.5-7.9-21.5-27.2-21.5H0 V86.8z M47.2,28.3c0,5.7-3.8,8.7-11.7,8.7H23V19.6h12.5C43.8,19.6,47.2,22.6,47.2,28.3z M49.8,60.8c0,6-3.8,8.7-12.1,8.7H22.6V51.7 h15.1C46,52.1,49.8,54.7,49.8,60.8z M128.3,0h-18.9L73.6,100h18.5L128.3,0z M216.6,44.5c0-23.8-12.8-42.3-46-42.3h-35.5v84.5h35.5 C203.4,86.8,216.6,68.3,216.6,44.5z M192.5,44.5c0,16.6-9.4,22.6-22.3,22.6h-12.1V21.9h12.1C183,21.9,192.5,27.9,192.5,44.5z"></path><path d="M224.2,46.4c0,22.6,18.5,41.1,41.1,41.1c22.6,0,41.1-18.5,41.1-41.1S287.9,5.3,265.3,5.3C242.6,5.3,224.2,23.8,224.2,46.4z M232.1,46.4c0-18.9,14.7-34,33.2-34c18.5,0,33.2,15.1,33.2,34s-15.1,34-33.2,34C246.8,80,232.1,64.9,232.1,46.4z M246,66.8h12.8 v-14h7.5l7.5,14h14l-9.4-16.6c4.2-1.9,7.5-6.8,7.5-12.1c0-9.4-6-14-16.6-14h-23.8v42.6H246z M272.8,38.1c0,3.4-2.3,4.9-6.4,4.9h-7.9 V34h7.9C270.9,34.3,272.8,35.1,272.8,38.1z"></path></svg>
+                        </div>
+                        <div class="input-div">
+                            <span class="text">Stay in the know</span>
+                           <div class="input">
+                            <input placeholder="Email Adress" type="text" name="" id="">
+                            <i class="bi bi-arrow-right"></i>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <div class="right-side">
+                        <p class="collaborate">
+                            We collaborate with ambitious brands and people. Let's build. <span style="text-decoration:underline;">biz@basicagency.com</span>
+                        </p>
+                       <div class="cols">
+                        <div class="col col-1">
+                            <h4 class="title"></i>SOCIAL</h4>
+                            <ul>
+                                <li>
+                                    Instagram
+                                </li>
+                                
+                                <li>
+                                    Twitter
+                                </li>
+                                
+                                <li>
+                                    Linkedln
+                                </li>
+                                
+                                <li>
+                                    Facebook
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-2">
+                            <h4 class="title">INITIATIVES</h4>
+                            <ul>
+                                <li>
+                                    Crafted
+                                </li>
+                                
+                                <li>
+                                    Culture Manual
+                                </li>
+                                
+                                <li>
+                                    Applied
+                                </li>
+                                
+                                <li>
+                                    Brandbeats
+                                </li>
+                                <li>
+                                    Moves
+                                </li>
+                                <li>
+                                    B®/Good
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-3">
+                            <h4 class="title"></i>OFFICES</h4>
+                            <ul>
+                                <li>
+                                    San Diego – CA
+                                </li>
+                                
+                                <li>
+                                    New York – NY
+                                </li>
+                                
+                                <li>
+                                    Bay Area – CA
+                                </li>
+                                
+                                <li>
+                                    St. Louis – MO
+                                </li>
+                                <li>
+                                    Amsterdam – NL
+                                </li>
+                                <li>
+                                    London – EN
+                                </li>
+                                <li>
+                                    Berlin – GE
+                                </li>
+                                <li>
+                                    Argentina – AR
+                                </li>
+                            </ul>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    responsiveClass:true,
+    nav:false,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:false,
+        }
+    }
+})
+</script>
+</body>
+</html>
