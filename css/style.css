@@ -928,6 +928,9 @@ footer .container .row .footer-body .right-side .cols .col ul li {
   }
 }
 @media only screen and (max-width: 350px) {
+  footer {
+    padding: 50px 30px !important;
+  }
   footer .container .row .input-div .bi {
     display: none !important;
   }

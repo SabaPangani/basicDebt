@@ -11,7 +11,7 @@ document.body.addEventListener("mousemove",function(e){
     console.log(e.pageY)
     cursor.style.left = e.pageX + "px";
     cursor.style.top = e.pageY + "px";
-    if (e.pageY < 1350 && e.pageY > 107){
+    if (e.pageY < 1302 && e.pageY > 107){
         cursor.classList.add("active");
         reel.style.opacity = "0"
         heroDiv.style.cursor = "none"
@@ -22,7 +22,7 @@ document.body.addEventListener("mousemove",function(e){
     }
     cursorDrag.style.left = e.pageX + "px";
     cursorDrag.style.top = e.pageY + "px";
-    if (e.pageY > 3941 && e.pageY < 4353){
+    if (e.pageY > 3949 && e.pageY < 4353){
         cursorDrag.classList.add("active");
         carousel.style.cursor = "none"
     }else{
