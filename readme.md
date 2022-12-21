@@ -10,3 +10,12 @@
     </a>
   </h3>
 </div>
+<br>
+## Built with 
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flex
+- JavaScript
+- SASS/SCSS
+
