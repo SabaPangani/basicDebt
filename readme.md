@@ -12,7 +12,6 @@
 </div>
 <br>
 ## Built with 
-<br>
 - Semantic HTML5 markup
 - CSS custom properties
 - Flex
