@@ -12,7 +12,7 @@
 </div>
 <br>
 ## Built with 
-<hr>
+<br>
 - Semantic HTML5 markup
 - CSS custom properties
 - Flex
